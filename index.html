@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aathira Namboodiri | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#6c63ff;
+  --secondary:#ff6f91;
+  --bg:#0f0f1a;
+  --card:rgba(255,255,255,0.08);
+  --text:#ffffff;
+  --muted:#b5b5c5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top, #1b1b3a, #0f0f1a);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  backdrop-filter:blur(10px);
+  background:rgba(15,15,26,0.6);
+  z-index:1000;
+}
+
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:var(--primary);
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* HERO */
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 10%;
+}
+
+.hero{
+  max-width:800px;
+}
+
+.hero h1{
+  font-size:3.5rem;
+  font-weight:700;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin:20px 0 40px;
+  color:var(--muted);
+  font-size:1.2rem;
+}
+
+.hero button{
+  padding:14px 36px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.hero button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(108,99,255,0.4);
+}
+
+/* SECTIONS */
+section{
+  padding:100px 10%;
+}
+
+h2{
+  font-size:2.2rem;
+  margin-bottom:50px;
+  text-align:center;
+}
+
+/* ABOUT */
+.about{
+  display:flex;
+  justify-content:center;
+}
+
+.about div{
+  background:var(--card);
+  padding:45px;
+  border-radius:24px;
+  max-width:900px;
+  width:100%;
+  text-align:center;
+  backdrop-filter:blur(20px);
+}
+
+/* EXPERIENCE */
+.experience{
+  display:flex;
+  justify-content:center;
+}
+
+.experience-card{
+  background:var(--card);
+  padding:45px;
+  border-radius:24px;
+  max-width:900px;
+  width:100%;
+  text-align:center;
+  backdrop-filter:blur(20px);
+}
+
+.experience-card h3{
+  font-size:1.4rem;
+  margin-bottom:8px;
+}
+
+.experience-card span{
+  display:block;
+  color:var(--secondary);
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.experience-card p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+
+.skill{
+  background:var(--card);
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  transition:.4s;
+}
+
+.skill:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.project{
+  background:var(--card);
+  padding:30px;
+  border-radius:20px;
+  transition:.4s;
+  position:relative;
+}
+
+.project:hover{
+  transform:translateY(-10px);
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  display:inline-block;
+  margin:15px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:1.1rem;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <strong>Aathira</strong>
+  <div>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <h1>Aathira Namboodiri</h1>
+    <p>MCA Student • Front-End Developer • Creative Technologist</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Let’s Connect
+    </button>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <div>
+      I am an MCA student at SRM Institute of Science and Technology with experience as an Associate Analyst at Deloitte USI. 
+      I enjoy building clean, responsive user interfaces and transforming ideas into intuitive digital experiences. 
+      I have a strong interest in Python development and problem-solving, and I enjoy working on projects where logic and creativity come together.
+      With strong analytical skills and a structured mindset, I focus on simplifying complex challenges into elegant solutions.
+      Driven by a positive attitude and a constant desire to learn, I aim to create solutions that not only function well but also feel thoughtful and refined.
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="experience">
+    <div class="experience-card">
+      <h3>Associate Analyst</h3>
+      <span>Deloitte USI | Jan 2024 – Apr 2024</span>
+      <p>
+        Worked on developing clean, responsive, and accessible user interfaces using HTML, CSS, JavaScript, and Bootstrap.
+        Collaborated with cross-functional teams to ensure cross-browser compatibility and improve user experience while
+        following industry best practices.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML • CSS • JavaScript</div>
+    <div class="skill">Python • Java • C</div>
+    <div class="skill">React • Bootstrap</div>
+    <div class="skill">SQL • Databases</div>
+    <div class="skill">Software Engineering</div>
+    <div class="skill">Software Testing</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Face Mask Detection</h3>
+      <p>
+        A real-time Face Mask Detection system using Python, CNN, TensorFlow, and OpenCV to detect mask compliance through live video feeds.
+      </p>
+    </div>
+    <div class="project">
+      <h3>Personal Expense Tracker</h3>
+      <p>
+        A responsive web-based application that allows users to track, manage, and analyze daily expenses efficiently.
+      </p>
+    </div>
+    <div class="project">
+      <h3>Petcare Management System</h3>
+      <p>
+        A full-stack web application built using Flask and SQLite to manage pet details, appointments, and medical records.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <a href="mailto:aathira.nam@gmail.com">aathira.nam@gmail.com</a>
+  <a href="tel:9495229730">+91 94952 29730</a>
+</section>
+
+<footer>
+  © 2025 Aathira Namboodiri
+</footer>
+
+</body>
+</html>
